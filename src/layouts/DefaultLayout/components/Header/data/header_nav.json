@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Trang chủ",
+    "url": "/"
+  },
+  {
+    "title": "Quản lý bài viết",
+    "url": "quan-ly-bai-viet"
+  },
+  {
+    "title": "Quản lý người dùng",
+    "url": "quan-ly-nguoi-dung"
+  },
+  {
+    "title": "Quản lý hệ thống",
+    "url": "/system-config"
+  }
+]
