@@ -2,7 +2,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout";
 import Home from "./pages/Home/Home";
 import SystemConfig from "./pages/SystemConfig/SystemConfig";
-import systemConfigMenu from "./pages/SystemConfig/data/menu.json";
+import { breadcrumbSystemConfig } from "./pages/SystemConfig/data/breadcrumb";
+import { systemConfigMenu } from "./pages/SystemConfig/data/menu";
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
         <Route
           path="/"
           element={
-            <DefaultLayout menu={[]}>
+            <DefaultLayout>
               <Home />
             </DefaultLayout>
           }
@@ -19,7 +20,10 @@ export default function App() {
         <Route
           path="/system-config"
           element={
-            <DefaultLayout menu={systemConfigMenu}>
+            <DefaultLayout
+              menu={systemConfigMenu}
+              breadcrumb={breadcrumbSystemConfig}
+            >
               <SystemConfig />
             </DefaultLayout>
           }

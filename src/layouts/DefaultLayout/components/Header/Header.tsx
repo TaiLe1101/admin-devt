@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import header_nav from "./data/header_nav.json";
+import { headerNav } from "./data/headerNav";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
       </section>
       <nav className="w-[85%]">
         <ul className="flex gap-4">
-          {header_nav.map((nav) => (
+          {headerNav.map((nav) => (
             <li key={nav.title}>
               <NavLink
                 to={nav.url}
