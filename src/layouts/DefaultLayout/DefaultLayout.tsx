@@ -1,9 +1,8 @@
 import { Breadcrumb } from "antd";
 import { ReactNode } from "react";
-import { Breadcrumb as BreadcrumbType } from "../../pages/SystemConfig/data/breadcrumb";
-import { Menu } from "../../pages/SystemConfig/data/menu";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import { Breadcrumb as BreadcrumbType, Menu } from "../../routes/RouteConfig";
 
 interface DefaultLayoutProps {
   children: ReactNode;

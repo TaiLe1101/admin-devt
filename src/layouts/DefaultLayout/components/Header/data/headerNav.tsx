@@ -1,12 +1,12 @@
-import { ROUTE } from "../../../../../constants/routes";
+import { ROUTES } from "../../../../../constants/routes";
 
 export const headerNav = [
   {
     title: "Trang chủ",
-    url: ROUTE.ADMIN,
+    url: ROUTES.ADMIN,
   },
   {
     title: "Quản lý hệ thống",
-    url: ROUTE.SYSTEM_CONFIG,
+    url: ROUTES.SYSTEM_CONFIG,
   },
 ];
