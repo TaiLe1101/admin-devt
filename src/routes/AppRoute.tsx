@@ -10,10 +10,11 @@ import { useAppSelector } from "../app/hooks";
 import { selectToken } from "../features/auth/authSlice";
 import DefaultLayout from "../layouts/DefaultLayout/DefaultLayout";
 import PrivateRoute from "./PrivateRoute";
-import routesConfig, { RouteConfig } from "./RouteConfig";
+import routesConfig, { RouteConfig } from "./routeConfig";
 
 export default function AppRoutes() {
-  const isAuthenticated = !!useAppSelector(selectToken);
+  // const isAuthenticated = !!useAppSelector(selectToken);
+  const isAuthenticated = true;
   const appName = "DevT Admin";
 
   console.log("isAuthenticated", isAuthenticated);

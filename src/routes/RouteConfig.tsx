@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DashboardOutlined } from "@ant-design/icons";
+import {
+  AuditOutlined,
+  DashboardOutlined,
+  FileSearchOutlined,
+} from "@ant-design/icons";
 import { ReactNode } from "react";
 import { ROUTES } from "../constants/routes";
 import DefaultLayout from "../layouts/DefaultLayout/DefaultLayout";
@@ -7,6 +11,8 @@ import Home from "../pages/Home/Home";
 import SystemConfig from "../pages/SystemConfig/SystemConfig";
 import { Link } from "react-router-dom";
 import Login from "../pages/Login/Login";
+import Profile from "../pages/Profile/Profile";
+import ArticleManagement from "../pages/ArticleManagement/ArticleManagement";
 
 export interface Menu {
   key: string;
@@ -41,12 +47,50 @@ const routesConfig: RouteConfig[] = [
     private: false,
   },
   {
+    path: ROUTES.PROFILE,
+    title: "Profile",
+    name: "Profile",
+    layout: DefaultLayout,
+    component: Profile,
+    private: true,
+  },
+  {
     path: ROUTES.ADMIN,
     title: "Admin Dashboard",
     name: "Admin",
     layout: DefaultLayout,
     component: Home,
     private: true,
+  },
+  {
+    path: ROUTES.ARTICLE_MANAGEMENT,
+    title: "Article Management",
+    name: "ArticleManagement",
+    layout: DefaultLayout,
+    component: ArticleManagement,
+    private: true,
+    menus: [
+      {
+        key: "#quan-ly-bai-viet",
+        label: "Quản lý bài viết",
+        icon: <FileSearchOutlined />,
+        children: [{ key: "/article-management", label: "Quản lý bài viết" }],
+      },
+      {
+        key: "#quan-ly-danh-muc",
+        label: "Quản lý danh mục",
+        icon: <AuditOutlined />,
+        children: [{ key: "/category-management", label: "Quản lý danh mục" }],
+      },
+    ],
+    breadcrumb: [
+      {
+        title: <Link to={ROUTES.ADMIN}>Trang chủ</Link>,
+      },
+      {
+        title: "Quản lý bài viết",
+      },
+    ],
   },
   {
     path: ROUTES.SYSTEM_CONFIG,

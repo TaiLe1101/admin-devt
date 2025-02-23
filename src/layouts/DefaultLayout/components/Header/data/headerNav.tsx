@@ -9,4 +9,8 @@ export const headerNav = [
     title: "Quản lý hệ thống",
     url: ROUTES.SYSTEM_CONFIG,
   },
+  {
+    title: "Quản lý bài viết",
+    url: ROUTES.ARTICLE_MANAGEMENT,
+  },
 ];
